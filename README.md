@@ -10,9 +10,9 @@
 [![Server Source](https://img.shields.io/badge/Server_Source-DriftwoodServer-444.svg)](https://github.com/HumanGenome/DriftwoodServer)
 [![License](https://img.shields.io/badge/License-MIT-lightgrey.svg)](LICENSE)
 
-Driftwood gives **How to Fish** always-on dedicated servers: players join through the Driftwood app, hosts run the Driftwood server package next to How to Fish's game files, and the world lives on the server instead of inside one person's game. No waiting for the host to come online, and nobody's PC doing the hosting.
+**How to Fish** has no dedicated server. Its co-op runs in a Steam lobby hosted from one player's game, so the world is only there while that player is playing. Driftwood adds a How to Fish dedicated server: [DriftwoodServer](https://github.com/HumanGenome/DriftwoodServer) runs the game headless on a Windows machine with a public IP and port, and the Driftwood app connects players to it by address.
 
-Every player installs Driftwood to join a Driftwood server, the host included: How to Fish has no dedicated servers of its own, so the app is how anyone gets in. It installs once per person and takes a minute. Your copy of How to Fish is bought, launched and updated through Steam exactly as normal; Driftwood replaces nothing and ships no part of the game.
+Every player must install Driftwood to join a Driftwood server. Stock How to Fish cannot connect to a Driftwood server directly. Your copy of the game is still bought, launched and updated through Steam; Driftwood ships no part of it.
 
 <p align="center">
   <img src="docs/img/launcher.png" alt="The Driftwood app with a How to Fish server online and three players on it" width="860">
@@ -20,42 +20,45 @@ Every player installs Driftwood to join a Driftwood server, the host included: H
 
 ## Features
 
-### 🌊 Your world never sleeps
-The world lives on the server, not on anyone's PC. One of you fishes at noon, another at midnight, and the same world is waiting for both. When the last player logs off the server keeps running and keeps saving.
-
 ### 🧭 Join by address
-Save a server's address once. From then on the app shows whether it is up and who is on it, and joining is one click: **Connect** readies How to Fish and takes you straight in.
+Save a server's address once. The app then shows whether it is up and who is on it, and **Connect** starts How to Fish and takes you straight in.
 
-### 🧑‍🤝‍🧑 Up to eight players
-The full co-op limit How to Fish supports, with nobody's machine doing the hosting. The limit is applied before the server opens its door rather than after, so a full server turns players away cleanly instead of half-admitting them.
+### 💬 Chat commands in the game's own chat
+Players type `!help`, `!stuck` (back to the island spawn), `!playtime` and `!top` into How to Fish's chat.
 
-### 🚦 Refuses to run broken
-The server resolves everything it needs to patch **before** it patches anything, counts what it actually changed, and refuses to host if a single required piece has moved. A game update that breaks it produces one plain sentence naming what failed, not a server that boots, opens a port and hosts nothing.
-
-### 🩺 Honest status
-A server reports ready only once the world is genuinely running, not merely once the port is open: the gameplay port binds before the world exists, so "the process answered" is equally true of a server whose entire mod stack failed. An unknown player count is reported as unknown and never rounded down to zero.
-
-### 💾 Backups that are actually consistent
-The server is told to save and the save is confirmed on disk before a snapshot is taken, so a backup is a whole world rather than whatever happened to be written when the copy started.
-
-<p align="center">
-  <img src="docs/img/world-backups.png" alt="The World backups dialog listing snapshots with full timestamps and sizes" width="620">
-</p>
+### 🏆 A catch leaderboard
+The server credits every sale at the sell box to the player who caught the fish and keeps a board of catches, earnings, bosses and playtime. `!top` shows it in game; the console's `top` shows the full table.
 
 ### 🖥️ An admin console built in
-Server owners sign in with their admin password and drive the server from the Console tab: status, players, saves, snapshots. No extra tools, no separate RCON client.
+Server owners sign in with their admin password and drive the server from the Console tab: status, players, saves and snapshots, kick and block, a `[Server]` line in everyone's chat, the shared wallet, moving the crew to another island, and sending a stuck player back to shore.
 
 <p align="center">
   <img src="docs/img/console.png" alt="The Console tab connected to a server, showing status and the player list" width="860">
 </p>
 
+### 💾 Backups that are actually consistent
+The server saves and confirms the save is on disk before a snapshot is taken, so a backup is a whole world. Owners list and restore them from the app.
+
+<p align="center">
+  <img src="docs/img/world-backups.png" alt="The World backups dialog listing snapshots with full timestamps and sizes" width="620">
+</p>
+
+### 🔔 Discord alerts
+Point the server at a Discord webhook and it posts joins and leaves, boss kills, island moves and blocked join attempts.
+
+### 🧑‍🤝‍🧑 Up to eight players
+The server enforces its slot count before a player gets in, so a full server turns the next player away cleanly instead of half-admitting them.
+
+### 🚦 Says why when it cannot host
+Before it changes anything in the game, the server checks every piece it depends on. If a game update moved one, it refuses to host and names what moved in one sentence, instead of opening a port with nothing behind it. It reports ready only once the world is running.
+
 ### 🪶 Light on the machine
-One server is a single game process with a small mod inside it and no renderer, so a modest box can host several. The server package adds a few hundred kilobytes on top of How to Fish's own files.
+One server is the game itself with no renderer and a small mod inside it, so one machine can host several. The server package is under a megabyte on top of How to Fish's own files.
 
 ## Install
 
 ### Managed hosting
-[How to Fish hosting from SurvivalServers.com](https://www.survivalservers.com/services/game_servers/how_to_fish/?utm_source=github&utm_medium=readme_install&utm_campaign=driftwood) comes with Driftwood installed and kept up to date, the ports open, and an address ready to hand to your players.
+[How to Fish hosting from SurvivalServers.com](https://www.survivalservers.com/services/game_servers/how_to_fish/?utm_source=github&utm_medium=readme_install&utm_campaign=driftwood) comes with Driftwood installed, the ports open, and an address ready to hand to your players.
 
 ### Players
 1. Download `DriftwoodSetup-<version>.exe` from the [latest release](https://github.com/HumanGenome/Driftwood/releases/latest).
