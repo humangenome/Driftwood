@@ -85,10 +85,7 @@ The server package for hosts lives on the [DriftwoodServer release page](https:/
 
 ## Source
 
-Driftwood is split into two public repos:
-
-- **Driftwood** (this repo): the player side, the desktop app players install, plus the public downloads and documentation.
-- **[DriftwoodServer](https://github.com/HumanGenome/DriftwoodServer)**: the dedicated server package hosts run next to How to Fish's game files.
+The server's source is public at [HumanGenome/DriftwoodServer](https://github.com/HumanGenome/DriftwoodServer). The app ships as release binaries from this repo.
 
 Players only need this repo's releases; hosts run the server from DriftwoodServer's.
 
