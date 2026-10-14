@@ -68,6 +68,12 @@ One server is the game itself with no renderer and a small mod inside it, so one
 ### Self-hosted servers
 The walkthrough is [DriftwoodServer's README](https://github.com/HumanGenome/DriftwoodServer#readme). You will need a Windows machine, a copy of How to Fish's game files on it (from your own Steam copy; the server package ships no part of the game), and two open ports: the game port and the status port directly above it.
 
+### Admin password
+The app's Console tab and World backups ask for the server's admin password. It is not the password players join with, and players never need it. The app keeps it on your PC only.
+
+- **Rented from SurvivalServers.com:** it is printed on your server's page in the control panel, under Driftwood Admin.
+- **Self-hosted:** it is the `authToken` you set in the server's config ([step 5 of DriftwoodServer's README](https://github.com/HumanGenome/DriftwoodServer#5-fill-in-the-config-and-pin-the-build)).
+
 ## Releases
 
 This repo publishes the player side:
