@@ -57,7 +57,7 @@ One server is the game itself with no renderer and a small mod inside it, so one
 
 ## Install
 
-### Managed hosting
+### Rent a server
 [How to Fish hosting from SurvivalServers.com](https://www.survivalservers.com/services/game_servers/how_to_fish/?utm_source=github&utm_medium=readme_install&utm_campaign=driftwood) comes with Driftwood installed, the ports open, and an address ready to hand to your players.
 
 ### Players
