@@ -21,7 +21,10 @@ Every player must install Driftwood to join a Driftwood server. Stock How to Fis
 ## Features
 
 ### 🧭 Join by address
-Save a server's address once. The app then shows whether it is up and who is on it, and **Connect** starts How to Fish and takes you straight in.
+Save a server's address once. The app then shows whether it is up and who is on it, and **Connect** starts How to Fish and takes you straight in. After your first Connect, you can also type a server's address and port into How to Fish's own **Join Game** box.
+
+### 🎣 Characters follow the Steam account
+The app tells the server which Steam account is joining, so the server loads your own saved inventory, health and baits, whichever order your crew joins in.
 
 ### 💬 Chat commands in the game's own chat
 Players type `!help`, `!stuck` (back to the island spawn), `!playtime` and `!top` into How to Fish's chat.
