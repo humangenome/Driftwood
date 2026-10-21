@@ -1,5 +1,8 @@
 <p align="center">
-  <img src="docs/img/driftwood-lockup.png" alt="Driftwood" width="440">
+  <picture>
+    <source media="(prefers-color-scheme: dark)" srcset="docs/img/driftwood-logo-dark.png">
+    <img src="docs/img/driftwood-logo-light.png" alt="Driftwood" width="460">
+  </picture>
 </p>
 
 <p align="center">
