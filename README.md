@@ -135,7 +135,7 @@ Driftwood is a community project and is not affiliated with, endorsed by, or sup
 
 ## License
 
-This repo's README and docs are MIT, see [LICENSE](LICENSE). DriftwoodServer's source is MIT in its own repo. The app is free to download; its source is not public.
+The documentation in this repo is MIT. The app and in-game runtime binaries attached to releases are free for personal use and closed source. DriftwoodServer is MIT in its own repo. Full terms in [LICENSE](LICENSE).
 
 ## Credits
 

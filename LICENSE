@@ -1,4 +1,27 @@
-MIT License
+Driftwood — Repository License
+
+This repository contains:
+
+1. Documentation, README, and miscellaneous text files. These materials are
+   licensed under the MIT License (see below).
+
+2. Compiled binaries of the Driftwood Launcher and Driftwood game-side runtime
+   components attached to GitHub Releases. These binaries are PROPRIETARY
+   and CLOSED SOURCE. They are made available for personal use only.
+   Redistribution, modification, decompilation, reverse-engineering, or
+   commercial repackaging of those proprietary binaries is not permitted.
+
+3. The DriftwoodServer host-side server is a separate project, distributed
+   from https://github.com/HumanGenome/DriftwoodServer under the MIT License.
+   When DriftwoodServer-only binaries are attached to releases on this
+   repository, they are governed by DriftwoodServer's MIT License, not by this
+   file. Mixed bundles include both MIT DriftwoodServer files and proprietary
+   Driftwood runtime files; each file keeps its own license.
+
+---
+
+MIT License (for materials in this repository, excluding the launcher binary
+and excluding DriftwoodServer):
 
 Copyright (c) 2026 HumanGenome
 
