@@ -15,14 +15,14 @@
 
 # Driftwood
 
-**How to Fish** has no dedicated server. Its co-op runs in a Steam lobby on one player's PC, so the island is only there while that player is playing. Driftwood adds a How to Fish dedicated server: [DriftwoodServer](https://github.com/HumanGenome/DriftwoodServer) runs the game headless on a Windows machine with a public IP and port, and the Driftwood app connects players to it by address.
+**How to Fish** has no dedicated server. Its co-op runs in a Steam lobby on one player's PC, so the island is only there while that player is playing. Driftwood adds a How to Fish dedicated server. Players join it by IP with the Driftwood app.
 
-Every player installs the Driftwood app, or its join mod from Thunderstore, to join a Driftwood server. Stock How to Fish cannot connect to a Driftwood server directly.
+Every player needs the Driftwood app, or its DriftwoodConnect mod from [Thunderstore](https://thunderstore.io/c/how-to-fish/p/HumanGenome/DriftwoodConnect/), to join.
 
 ## Features
 
 ### 🧭 Join by IP
-Add a server by its IP and port. The app shows whether it is up and who is on it, and **Connect** starts How to Fish and takes you in. The server loads the character saved under your Steam account, whatever order your crew joins in. After your first Connect, the same address also works in How to Fish's own **Join Game** box.
+Add a server by its IP and port. The app shows whether it's online and who's on it, and **Connect** starts How to Fish and joins the server. You get the character saved under your Steam account, whatever order your crew joins in. After your first Connect, the same address also works in the game's own **Join Game** box.
 
 <p align="center">
   <img src="docs/img/app-v0.1.5-servers.png" alt="The Driftwood app with a How to Fish server online, two players on it with their time on the server, and the Connect button" width="860">
@@ -36,7 +36,7 @@ The server writes the world to disk before every snapshot, so a backup is always
 </p>
 
 ### 🖥️ Server console
-Owners paste the server's admin password once and run the server from the Console tab: status, players, saves and snapshots, kick and block, a `[Server]` line in everyone's chat, the crew's shared wallet, moving the crew to another island, and sending a stuck player back to shore.
+Owners paste the server's admin password once and run the server from the Console tab: status, players, saves and backups, kick and block, a `[Server]` line in everyone's chat, the crew's shared wallet, moving the crew to another island, and sending a stuck player back to shore.
 
 <p align="center">
   <img src="docs/img/app-v0.1.5-console.png" alt="The Driftwood app's Console tab connected to a server, after the world, version, money, blocked, players and snapshots commands" width="860">
@@ -44,33 +44,33 @@ Owners paste the server's admin password once and run the server from the Consol
 
 ### Also built in
 - **Chat commands:** players type `!help`, `!stuck` (back to the island spawn), `!playtime` and `!top` into How to Fish's own chat.
-- **Catch leaderboard:** every sale at the sell box counts for the player who caught the fish, and the board keeps catches, earnings, bosses and playtime. `!top` shows it in game; the console's `top` shows the full table.
-- **Discord alerts:** point the server at a Discord webhook and it posts joins and leaves, boss kills, island moves and blocked join attempts.
+- **Catch leaderboard:** every sale at the sell box counts for the player who caught the fish, and the board keeps catches, earnings, bosses and playtime. `!top` shows it in game, and the console's `top` shows the full table.
+- **Discord alerts:** point the server at a Discord webhook and it posts joins and leaves, boss kills, island moves and blocked players trying to join.
 
 ## Install
 
 ### Rent a server
-[How to Fish hosting from SurvivalServers.com](https://www.survivalservers.com/services/game_servers/how_to_fish/?utm_source=github&utm_medium=readme_install&utm_campaign=driftwood) comes with Driftwood installed, the ports open, and an address ready to hand to your players.
+[SurvivalServers.com](https://www.survivalservers.com/services/game_servers/how_to_fish/?utm_source=github&utm_medium=readme_install&utm_campaign=driftwood) runs How to Fish servers with Driftwood installed.
 
 ### Players
 1. Download `DriftwoodSetup-latest.exe` from the [latest release](https://github.com/HumanGenome/Driftwood/releases/latest).
 2. Run it. If Windows shows "Windows protected your PC", choose **More info**, then **Run anyway**.
 3. Open Driftwood and add the server's IP and port.
-4. Click **Connect**. The app readies How to Fish and takes you in.
+4. Click **Connect**. How to Fish starts and joins the server.
 
 ### Players with a mod manager
-Install [DriftwoodConnect](https://thunderstore.io/c/how-to-fish/p/HumanGenome/DriftwoodConnect/) with r2modman or Gale. Start How to Fish, open **Join Game**, paste the server's `address:port` into the lobby ID box and press **Join**. The mod tells the server which Steam account is joining, so you get your own character. The Console tab and World backups are in the app only.
+Install [DriftwoodConnect](https://thunderstore.io/c/how-to-fish/p/HumanGenome/DriftwoodConnect/) with r2modman or Gale. Start How to Fish, open **Join Game**, paste the server's IP and port (`address:port`) into the lobby ID box and press **Join**. The Console tab and World backups are in the app only.
 
-### Self-hosted servers
-The walkthrough is [DriftwoodServer's README](https://github.com/HumanGenome/DriftwoodServer#readme). You need a Windows machine, a copy of How to Fish's game files on it (from your own Steam copy; the server package ships no part of the game), and two open ports: the game port and the status port directly above it.
+### Host your own
+Follow [DriftwoodServer's README](https://github.com/HumanGenome/DriftwoodServer#readme). You need a Windows PC, your own Steam copy of How to Fish, and two open ports: the game port and the one directly above it.
 
-The server package is under a megabyte on top of the game's files. If a game update moves something the server depends on, the server refuses to host and names what moved.
+**After a How to Fish update, check the server before you start it.** If the update changed something DriftwoodServer needs, the server won't start and names what changed. Wait for a new DriftwoodServer release.
 
 ### Admin password
 The app's Console tab and World window ask for the server's admin password. It is not the password players join with, and players never need it. The app keeps it on your PC only.
 
 - **Rented server:** your host shows it with your server's details.
-- **Self-hosted:** it is the `authToken` you set in the server's config ([step 5 of DriftwoodServer's README](https://github.com/HumanGenome/DriftwoodServer#5-fill-in-the-config-and-pin-the-build)).
+- **Your own server:** it's the `authToken` you set in `appsettings.json` ([step 5 of DriftwoodServer's README](https://github.com/HumanGenome/DriftwoodServer#5-fill-in-the-config-and-pin-the-build)).
 
 ## Releases
 
@@ -82,27 +82,22 @@ This repo publishes the player app:
 - `Driftwood-Launcher-Windows-x64-v<version>.zip`, the package the app downloads when it updates itself
 - `checksums.txt`, the SHA-256 of each file
 
-The server package for hosts lives on the [DriftwoodServer release page](https://github.com/HumanGenome/DriftwoodServer/releases/latest). What changed in the app is in [this repo's release notes](https://github.com/HumanGenome/Driftwood/releases); what changed on the server is in [DriftwoodServer's release notes](https://github.com/HumanGenome/DriftwoodServer/releases).
+The server download for hosts is on the [DriftwoodServer release page](https://github.com/HumanGenome/DriftwoodServer/releases/latest). What changed in the app is in [this repo's release notes](https://github.com/HumanGenome/Driftwood/releases), and what changed on the server is in [DriftwoodServer's release notes](https://github.com/HumanGenome/DriftwoodServer/releases).
 
 ## Source
 
-The server's source is public at [HumanGenome/DriftwoodServer](https://github.com/HumanGenome/DriftwoodServer). The app ships as release binaries from this repo.
-
-Players only need this repo's releases; hosts run the server from DriftwoodServer's.
+The server's source is public at [HumanGenome/DriftwoodServer](https://github.com/HumanGenome/DriftwoodServer). The app is published here as release downloads.
 
 ## FAQ
 
 ### How many players can join?
-Up to four, the number Dazed Games gives on How to Fish's [Steam page](https://store.steampowered.com/app/4001890/). The game's own lobby code makes room for more, but we have not seen more than four people play together. The host sets the server's slot count, and a full server turns the next player away cleanly instead of half-admitting them.
-
-### Does everyone need the app?
-Everyone needs Driftwood's join mod, DriftwoodConnect. The app installs it on your first Connect, or a mod manager installs it from [Thunderstore](https://thunderstore.io/c/how-to-fish/p/HumanGenome/DriftwoodConnect/). Server owners use the app for the Console tab and World backups.
+How to Fish's [Steam page](https://store.steampowered.com/app/4001890/) says up to 4. The game's own lobby code makes room for more, but we haven't seen more than 4 people play together. The server owner sets the player limit, and a full server turns the next player away.
 
 ### Does single-player still work?
-Yes. The join mod only steps in when you join a Driftwood server by address. Single-player and Steam lobbies play exactly as before.
+Yes. The join mod only steps in when you join a Driftwood server by IP. Single-player and Steam lobbies play the same as before.
 
 ### Does it change my game?
-On your first Connect, the app copies a small mod loader (BepInEx) and the Driftwood join mod into your How to Fish folder. Your copy of How to Fish is still bought, launched and updated through Steam.
+On your first Connect, the app copies a small mod loader (BepInEx) and the Driftwood join mod into your How to Fish folder. Steam still launches and updates the game.
 
 ### Where is my character saved?
 On the server, with the world, under your Steam account.
@@ -111,23 +106,17 @@ On the server, with the world, under your Steam account.
 Yes. In the app's World window, download a snapshot from the old server and upload it on the new one, or pick the old server under **Migrate from another server**. A single-player save from your own PC uploads the same way. The new world takes over when the server next starts, and the server keeps a backup of the world it replaces.
 
 ### Why does Windows warn about the installer?
-The installer is not code-signed, so Windows SmartScreen may show "Windows protected your PC". Choose **More info**, then **Run anyway**. You can check the file against the release's `checksums.txt`.
+Windows SmartScreen may show "Windows protected your PC" for a new app. Choose **More info**, then **Run anyway**. You can check the file against the release's `checksums.txt`.
 
 ### Does the app update itself?
-Yes. It checks for a new version when it starts and while it runs, and finishes the update once How to Fish is closed. Every update is signed, and the app refuses one that is not. Settings can turn the check off.
+Yes. It checks for a new version when it starts and while it runs, and finishes the update once How to Fish is closed. Every update is signed, and the app won't install one that isn't. You can turn updates off in Settings.
 
 ### Is Linux supported?
 No. The app and the server are Windows only.
 
-### Is this official?
-No. Driftwood is an independent project. Dazed Games does not ship dedicated servers for How to Fish.
-
-### Something broke
-[Open an issue](https://github.com/HumanGenome/Driftwood/issues). If you rent a server, your host handles billing and control panel questions.
-
 ## Contributing
 
-Bug reports and feature requests are welcome; see [CONTRIBUTING.md](CONTRIBUTING.md). Security issues go through [private reporting](.github/SECURITY.md), never a public issue.
+Bugs: [open an issue](https://github.com/HumanGenome/Driftwood/issues). Feature requests are welcome too, see [CONTRIBUTING.md](CONTRIBUTING.md). Security problems go through [private reporting](.github/SECURITY.md), never a public issue.
 
 ## Community note
 
