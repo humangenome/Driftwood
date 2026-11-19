@@ -36,7 +36,7 @@ The server writes the world to disk before every snapshot, so a backup is always
 </p>
 
 ### 🖥️ Server console
-Owners paste the server's admin password once and run the server from the Console tab: status, players, saves and backups, kick and block, a `[Server]` line in everyone's chat, the crew's shared wallet, moving the crew to another island, and sending a stuck player back to shore.
+Owners paste the server's admin password once and run the server from the Console tab: status, players, saves and backups, kick and block, a `[Server]` line in everyone's chat, the crew's shared wallet, moving the crew to another island, and sending a stuck player back to the island spawn.
 
 <p align="center">
   <img src="docs/img/app-v0.1.5-console.png" alt="The Driftwood app's Console tab connected to a server, after the world, version, money, blocked, players and snapshots commands" width="860">
