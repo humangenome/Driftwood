@@ -58,6 +58,8 @@ Owners paste the server's admin password once and run the server from the Consol
 3. Open Driftwood and add the server's IP and port.
 4. Click **Connect**. How to Fish starts and joins the server.
 
+If Windows says Smart App Control blocked the installer, wait a day or two for Windows to recognize the new version and run it again, or turn Smart App Control off in Windows Security under App & browser control.
+
 ### Players with a mod manager
 Install [DriftwoodConnect](https://thunderstore.io/c/how-to-fish/p/HumanGenome/DriftwoodConnect/) with r2modman or Gale. Start How to Fish, open **Join Game**, paste the server's IP and port (`address:port`) into the lobby ID box and press **Join**. The Console tab and World backups are in the app only.
 
