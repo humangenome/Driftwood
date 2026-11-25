@@ -29,10 +29,10 @@ Add a server by its IP and port. The app shows whether it's online and who's on 
 </p>
 
 ### 💾 World backups
-The server writes the world to disk before every snapshot, so a backup is always a whole world. From the app's World window, owners take a snapshot, download one, restore an earlier world, upload a single-player save from their own PC, or bring the latest snapshot over from another of their servers.
+The server saves the world before every backup, so a backup is always a whole world. In the app's **World backups** window, owners take a backup, download one, restore an earlier world, upload a single-player save from their PC, or copy the latest backup from another of their servers.
 
 <p align="center">
-  <img src="docs/img/app-v0.1.5-world-backups.png" alt="The Driftwood app's World window: the server's snapshots with date, time, kind and size, and the Take snapshot, Refresh, Download and Restore buttons" width="620">
+  <img src="docs/img/app-v0.1.5-world-backups.png" alt="The Driftwood app's World backups window: the server's backups with date, time, kind and size, and the Back up now, Refresh, Download and Restore buttons" width="620">
 </p>
 
 ### 🖥️ Server console
@@ -71,7 +71,7 @@ Follow [DriftwoodServer's README](https://github.com/HumanGenome/DriftwoodServer
 **After a How to Fish update, check the server before you start it.** If the update changed something DriftwoodServer needs, the server won't start and names what changed. Wait for a new DriftwoodServer release.
 
 ### Admin password
-The app's Console tab and World window ask for the server's admin password. It is not the password players join with, and players never need it. The app keeps it on your PC only.
+The Console tab and World backups ask for the server's admin password. Players don't need it. The app keeps it on your PC only.
 
 - **Rented server:** your host shows it with your server's details.
 - **Your own server:** it's the `authToken` you set in `appsettings.json` ([step 5 of DriftwoodServer's README](https://github.com/HumanGenome/DriftwoodServer#5-fill-in-the-config-and-pin-the-build)).
@@ -107,7 +107,7 @@ On your first Connect, the app copies a small mod loader (BepInEx) and the Drift
 On the server, with the world, under your Steam account.
 
 ### Can I move a world to another server?
-Yes. In the app's World window, download a snapshot from the old server and upload it on the new one, or pick the old server under **Migrate from another server**. A single-player save from your own PC uploads the same way. The new world takes over when the server next starts, and the server keeps a backup of the world it replaces.
+Yes. In the app's World backups window, download a backup from the old server and upload it on the new one, or pick the old server under **Copy a world from another server**. A single-player save from your PC uploads the same way. The new world loads when the server next starts, and the server keeps a backup of the world it replaces.
 
 ### Why does Windows warn about the installer?
 Windows SmartScreen may show "Windows protected your PC" for a new app. Choose **More info**, then **Run anyway**. You can check the file against the release's `checksums.txt`.
