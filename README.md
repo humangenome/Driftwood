@@ -60,7 +60,7 @@ Owners paste the server's admin password once and run the server from the Consol
 
 If Windows says Smart App Control blocked the installer, wait a day or two for Windows to recognize the new version and run it again, or turn Smart App Control off in Windows Security under App & browser control.
 
-If the app closes to update and then won't open, download the installer from our website and run it again.
+If the app closes to update and then won't open, download `DriftwoodSetup-latest.exe` from the [latest release](https://github.com/HumanGenome/Driftwood/releases/latest) and run it again.
 
 ### Players with a mod manager
 Install [DriftwoodConnect](https://thunderstore.io/c/how-to-fish/p/HumanGenome/DriftwoodConnect/) with r2modman or Gale. Start How to Fish, open **Join Game**, paste the server's IP and port (`address:port`) into the lobby ID box and press **Join**. The Console tab and World backups are in the app only.
